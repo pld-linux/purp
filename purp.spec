@@ -12,7 +12,8 @@ Patch0:		%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	byacc
+BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	rpm-devel
@@ -37,7 +38,8 @@ pakietów.
 %{__autoconf}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
-%{__make}
+%{__make} \
+	YY="bison -y"
 
 %install
 rm -rf $RPM_BUILD_ROOT

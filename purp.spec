@@ -8,6 +8,7 @@ Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
+Patch0:	%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 BuildRequires:	rpm-devel
@@ -26,6 +27,7 @@ pakietów.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_13

@@ -33,7 +33,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/usr/{sbin,man/man8}
-install -s purp $RPM_BUILD_ROOT/usr/sbin
+install -s purp $RPM_BUILD_ROOT%{_sbindir}
 install purp.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 bzip2 -9 $RPM_BUILD_ROOT%{_mandir}/man8/*
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README CHANGES
 
 %{_mandir}/man8/*
-%attr(711,root,root) /usr/sbin/*
+%attr(711,root,root) %{_sbindir}/*
 
 %changelog
 * Fri Oct 16 1998 Arkadiusz Mi¶kiewicz <misiek@zsz2.starachowice.pl>

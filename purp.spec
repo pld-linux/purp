@@ -27,7 +27,7 @@ pakietów.
 %patch -p1
 
 %build
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

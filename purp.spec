@@ -9,7 +9,7 @@ Source:	     ftp://ftp.lysator.liu.se/pub/unix/purp/%{name}-%{version}.tgz
 Patch:	     %{name}-%{version}.diff
 URL:	     http://www.lysator.liu.se/purp/
 Vendor:	     Anders Karlsson <pugo@lysator.liu.se>
-BuildRoot:   /tmp/%{name}-%{version}-buildroot
+BuildRoot:	/tmp/%{name}-%{version}-root
 Summary(pl): Program na konsolê do zarz±dzania pakietami RPM (ncurses)
 
 %description

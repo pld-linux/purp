@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
-Patch0:	%{name}-addch-fix.patch
+Patch0:		%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 BuildRequires:	rpm-devel

@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README CHANGES COPYING
+%doc CHANGES README
 %attr(755,root,root) %{_sbindir}/*
 %{_sysconfdir}/*
 %{_mandir}/man8/*

@@ -32,7 +32,7 @@ pakietów.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
 %{__make}

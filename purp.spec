@@ -12,6 +12,7 @@ Patch0:		%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	byacc
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	rpm-devel

@@ -12,6 +12,7 @@ Patch0:		%{name}-%{version}.diff
 URL:		http://www.lysator.liu.se/purp/
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 BuildRequires:	rpm-devel
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

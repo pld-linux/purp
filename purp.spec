@@ -5,8 +5,6 @@ Version:	1.1.0
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 Patch0:	%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/

@@ -10,7 +10,7 @@ Source:		ftp://ftp.lysator.liu.se/pub/unix/purp/%{name}-%{version}.tgz
 Patch:		%{name}-%{version}.diff
 URL:		http://www.lysator.liu.se/purp/
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A ncurses-based RPM-handler which provides a fast and powerful

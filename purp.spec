@@ -34,9 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/usr/{sbin,man/man8}
 install -s purp $RPM_BUILD_ROOT/usr/sbin
-install purp.8 $RPM_BUILD_ROOT/usr/man/man8
+install purp.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-bzip2 -9 $RPM_BUILD_ROOT/usr/man/man8/*
+bzip2 -9 $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755) 
 %doc README CHANGES
 
-%attr(644,root, man) /usr/man/man8/*
+%attr(644,root, man) %{_mandir}/man8/*
 %attr(711,root,root) /usr/sbin/*
 
 %changelog

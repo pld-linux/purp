@@ -7,6 +7,7 @@ License:	GPL
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 Group:		Applications/System
 Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	4a5fa4d75c97eb5edb81e89561f08ffe
 Patch0:		%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
 BuildRequires:	autoconf

@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755) 
 %doc README CHANGES
 
-%attr(644,root, man) %{_mandir}/man8/*
+%{_mandir}/man8/*
 %attr(711,root,root) /usr/sbin/*
 
 %changelog

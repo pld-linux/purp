@@ -47,7 +47,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man8/*
 %attr(711,root,root) %{_sbindir}/*
-
-%changelog
-* Fri Oct 16 1998 Arkadiusz Mi¶kiewicz <misiek@zsz2.starachowice.pl>
-- spec rewritten.

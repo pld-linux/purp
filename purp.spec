@@ -5,7 +5,7 @@ Version:	0.4.1
 Release:	4
 Copyright:	GPL
 Group:		Utilities/System
-Group(pl):	U¿ytki/System
+Group(pl):	Narzêdzia/System
 Source:		ftp://ftp.lysator.liu.se/pub/unix/purp/%{name}-%{version}.tgz
 Patch:		%{name}-%{version}.diff
 URL:		http://www.lysator.liu.se/purp/

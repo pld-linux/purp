@@ -45,14 +45,12 @@ install purp $RPM_BUILD_ROOT%{_sbindir}
 install purprc $RPM_BUILD_ROOT%{_sysconfdir}
 install purp.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf README CHANGES COPYING
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz CHANGES.gz COPYING.gz
+%doc README CHANGES COPYING
 %attr(755,root,root) %{_sbindir}/*
 %{_sysconfdir}/*
 %{_mandir}/man8/*

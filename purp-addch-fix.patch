@@ -1,0 +1,21 @@
+diff -urN /home/grzegol/download/purp-1.1.0/textwindow.cpp purp-1.1.0/textwindow.cpp
+--- /home/grzegol/download/purp-1.1.0/textwindow.cpp	Wed May 23 21:17:25 2001
++++ purp-1.1.0/textwindow.cpp	Sat Feb  2 15:59:08 2002
+@@ -159,7 +159,7 @@
+ 	  }
+ 	else
+ 	  {
+-	     waddch( win, ch );
++	     waddch( win, (unsigned char)ch );
+ 	     x++;
+ 	     if( x >= width )
+ 	       {
+@@ -197,7 +197,7 @@
+ 
+    while( ((ch = *tmpPtr++) != 0) && (ch != '\n') && (x < width) )
+      {
+-	waddch( win, ch );
++	waddch( win, (unsigned char)ch );
+  	x++;
+      }
+    

@@ -4,11 +4,13 @@ Name:		purp
 Version:	1.1.0
 Release:	1
 License:	GPL
+Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 Group:		Applications/System
 Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-addch-fix.patch
 URL:		http://www.lysator.liu.se/purp/
-Vendor:		Anders Karlsson <pugo@lysator.liu.se>
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	rpm-devel
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,14 +30,16 @@ pakietów.
 %patch0 -p1
 
 %build
-%configure2_13
-
+aclocal
+autoconf
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8,%{_sysconfdir}}
+
 install purp $RPM_BUILD_ROOT%{_sbindir}
 install purprc $RPM_BUILD_ROOT%{_sysconfdir}
 install purp.8 $RPM_BUILD_ROOT%{_mandir}/man8

@@ -1,0 +1,37 @@
+diff -urN purp-0.4.1.orig/Makefile purp-0.4.1/Makefile
+--- purp-0.4.1.orig/Makefile	Fri Oct 16 23:10:10 1998
++++ purp-0.4.1/Makefile	Fri Oct 16 23:13:07 1998
+@@ -7,6 +7,7 @@
+ #####################################################################
+ BINDIR = /usr/sbin
+ 
++PREFIX = /usr
+ #####################################################################
+ # Uncomment -DDEBUG_TO_TERM to enable functions that send debug-info 
+ # to a term-device. The device is selected by the --debug <device>
+@@ -18,12 +19,12 @@
+ 
+ CC           = c++
+ LINK	     = $(CC)
+-O            = -O2 -pipe
++O            = $(RPM_OPT_FLAGS) -pipe
+ 
+ INCPATHS     = -I/usr/include -I/usr/include/ncurses
+ INCLUDES     =
+ 
+-LIBPATHS     = -L/lib -L/usr/local/lib -L/usr/lib
++LIBPATHS     = -L/lib -L/usr/lib
+ LIBS         = -lrpm -lbsd -lncurses -lz -ldb 
+ 
+ CFLAGS       = $(O) $(DEFINES) $(INCPATHS) $(INCLUDES)
+@@ -78,8 +79,8 @@
+ 
+ 
+ install:
+-	install -o root -m 755 -s $(TARGET) $(BINDIR)	
+-	install -o root -m 644 purp.8 /usr/man/man8
++	install -m 755 -s $(TARGET) $(PREFIX)$(BINDIR)	
++	install -m 644 purp.8 $(PREFIX)/usr/man/man8
+ 
+ count:
+ 	@echo -n "        Header files (lines): "; cat *.h | wc -l;

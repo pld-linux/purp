@@ -1,14 +1,13 @@
 Summary:	A ncurses-based RPM-handler
 Summary(pl):	Program terminalowy (na ncurses) do zarz±dzania pakietami RPM
 Name:		purp
-Version:	0.4.1
-Release:	4
+Version:	1.1.0
+Release:	1
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
-Source0:	ftp://ftp.lysator.liu.se/pub/unix/purp/%{name}-%{version}.tgz
-Patch0:		%{name}-%{version}.diff
+Source0:	ftp://ftp.lysator.liu.se/pub/unix/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 URL:		http://www.lysator.liu.se/purp/
 Vendor:		Anders Karlsson <pugo@lysator.liu.se>
 BuildRequires:	rpm-devel
@@ -27,25 +26,28 @@ pakietów.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
+%configure2_13
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8,%{_sysconfdir}}
 install purp $RPM_BUILD_ROOT%{_sbindir}
+install purprc $RPM_BUILD_ROOT%{_sysconfdir}
 install purp.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf README CHANGES
+gzip -9nf README CHANGES COPYING
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz CHANGES.gz
+%doc README.gz CHANGES.gz COPYING.gz
 %attr(755,root,root) %{_sbindir}/*
+%{_sysconfdir}/*
 %{_mandir}/man8/*

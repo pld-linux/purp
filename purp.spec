@@ -1,5 +1,5 @@
 Summary:	A ncurses-based RPM-handler
-Summary(pl):	Program terminalowy (na ncurses) do zarz±dzania pakietami RPM
+Summary(pl.UTF-8):   Program terminalowy (na ncurses) do zarzÄ…dzania pakietami RPM
 Name:		purp
 Version:	1.1.0
 Release:	1
@@ -24,10 +24,10 @@ A ncurses-based RPM-handler which provides a fast and powerful way to
 navigate, install, upgrade and uninstall RPM-packages on
 text-terminal-devices.
 
-%description -l pl
-Program do zarz±dzania pakietami RPM bazuj±cy na ncurses. purp pozwala
-na szybkie i wydajne instalowanie, odinstalowywanie oraz aktualizacjê
-pakietów.
+%description -l pl.UTF-8
+Program do zarzÄ…dzania pakietami RPM bazujÄ…cy na ncurses. purp pozwala
+na szybkie i wydajne instalowanie, odinstalowywanie oraz aktualizacjÄ™
+pakietÃ³w.
 
 %prep
 %setup -q
